@@ -1,13 +1,14 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
+// @ts-ignore
+import AuthPage from "../pages/lecturer/Authpage";
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "SIWES Logbook App" },
+    { name: "description", content: "Digital SIWES Logbook Platform" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  // 2. Added ': any' to explicitly fix the TypeScript parameter type error
+  return <AuthPage onLogin={(user: any) => console.log("Logged in user:", user)} />;
 }
