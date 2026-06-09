@@ -1,8 +1,8 @@
 // ─── AUTH PAGE ───────────────────────────────────────────────
 import { useState } from 'react'
 import { supabase } from '../../lib/supabase'
-import { isMockMode, MOCK_STATE } from '../../data/mockData'
-import Alert from '../../components/ui/Alert'
+import { isMockMode, MOCK_STATE } from '../../data/mockdata'
+import Alert from '../../components/alert'
  
 export default
 function AuthPage({ onLogin }) {

@@ -1,7 +1,9 @@
 // ─── MOCK DATA (used when Supabase is not configured) ───────
-const isMockMode = SUPABASE_URL.includes("YOUR_PROJECT");
+import { SUPABASE_URL } from "../pages/config";
 
-const MOCK_STATE = {
+export const isMockMode = !SUPABASE_URL || SUPABASE_URL.includes("YOUR_PROJECT");
+
+export const MOCK_STATE = {
   currentUser: null,
   users: [
     { id: "s1", full_name: "Chidi Okonkwo", email: "student@demo.com", role: "student", matric_no: "ENG/2021/001", company_name: "Dangote Industries", department: "Computer Engineering", siwes_start_date: "2024-06-01", siwes_end_date: "2024-11-30", supervisor_id: "sup1", lecturer_id: "lec1" },
