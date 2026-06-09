@@ -1,5 +1,13 @@
+import { useState, useEffect } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { fmt, initials } from "../../utils/helper";
+import LecturerStudents from "./lecturerstudent";
+import LecturerReports from "./lecturerreport";
+import AuditTrail from "./audittrial";
+import ProfilePage from "../profilepage";
+
 // ─── LECTURER DASHBOARD ─────────────────────────────────────
-function LecturerDashboard({ user, activeTab }) {
+export default function LecturerDashboard({ user, activeTab }) {
   const [students, setStudents] = useState([]);
   const [entries, setEntries] = useState([]);
   const [reports, setReports] = useState([]);

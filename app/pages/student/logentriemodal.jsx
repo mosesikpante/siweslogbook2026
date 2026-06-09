@@ -1,4 +1,9 @@
-function LogEntryModal({ user, entry, onClose, onSaved }) {
+import { useState } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { supabase } from "../../lib/supabase";
+import Modal from "../../components/modal";
+
+export default function LogEntryModal({ user, entry, onClose, onSaved }) {
   const [form, setForm] = useState({
     entry_date: entry?.entry_date || new Date().toISOString().split("T")[0],
     activities: entry?.activities || "",

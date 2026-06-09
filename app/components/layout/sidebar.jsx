@@ -1,4 +1,4 @@
-import { initials } from '../../utils/helpers'
+import { initials } from '../../utils/helper'
 import { supabase } from '../../lib/supabase'
 
 const NAV_ITEMS = {

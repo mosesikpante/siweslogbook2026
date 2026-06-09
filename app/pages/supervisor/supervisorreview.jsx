@@ -1,4 +1,10 @@
-function SupervisorReview({ user, entries, reports, students, onRefresh }) {
+import { useState } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { supabase } from "../../lib/supabase";
+import { fmt, initials } from "../../utils/helper";
+import Modal from "../../components/modal";
+
+export default function SupervisorReview({ user, entries, reports, students, onRefresh }) {
   const [activeTab, setActiveTab] = useState("entries");
   const [selected, setSelected] = useState(null);
   const [comment, setComment] = useState("");

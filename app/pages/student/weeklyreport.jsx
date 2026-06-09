@@ -1,4 +1,13 @@
-function WeeklyReports({ user, entries, reports, onRefresh }) {
+import { useState } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { supabase } from "../../lib/supabase";
+import { generateWeeklyReport } from "../../lib/ai";
+import { fmt, weekNum, getWeekRange } from "../../utils/helper";
+import Alert from "../../components/alert";
+import Modal from "../../components/modal";
+import Spinner from "../../components/spinner";
+
+export default function WeeklyReports({ user, entries, reports, onRefresh }) {
   const [showModal, setShowModal] = useState(null);
   const [generating, setGenerating] = useState(false);
 
@@ -53,7 +62,7 @@ function WeeklyReports({ user, entries, reports, onRefresh }) {
   );
 }
 
-function ReportViewModal({ report, user, onClose, onRefresh }) {
+export function ReportViewModal({ report, user, onClose, onRefresh }) {
   const [review, setReview] = useState(report.student_review || "");
   const [loading, setLoading] = useState(false);
 

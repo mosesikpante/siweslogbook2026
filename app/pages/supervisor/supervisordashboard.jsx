@@ -1,5 +1,12 @@
+import { useState, useEffect } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { fmt, initials } from "../../utils/helper";
+import SupervisorReview from "./supervisorreview";
+import SupervisorStudents from "./supervisorstudent";
+import ProfilePage from "../profilepage";
+
 // ─── SUPERVISOR DASHBOARD ───────────────────────────────────
-function SupervisorDashboard({ user, activeTab }) {
+export default function SupervisorDashboard({ user, activeTab }) {
   const [students, setStudents] = useState([]);
   const [entries, setEntries] = useState([]);
   const [reports, setReports] = useState([]);

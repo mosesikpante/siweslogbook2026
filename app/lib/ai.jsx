@@ -1,7 +1,7 @@
 // ─── AI HELPER ──────────────────────────────────────────────
-import { CLAUDE_MODEL } from '../config'
+import { CLAUDE_MODEL } from '../pages/config'
  
-async function generateWeeklyReport(entries, studentName, companyName) {
+export async function generateWeeklyReport(entries, studentName, companyName) {
   const prompt = `You are a professional SIWES (Student Industrial Work Experience Scheme) report writer. 
 Generate a formal, corporate-style weekly summary report based on the following daily log entries.
 

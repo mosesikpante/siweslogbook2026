@@ -2,16 +2,12 @@
 import { useState } from "react";
 import { supabase } from "../../lib/supabase";
 import { isMockMode, MOCK_STATE } from "../../data/mockdata";
-import { fmt } from "../../utils/helpers";
-import Modal from "../../components/ui/Modal";
-import LogEntryModal from "./LogEntryModal";
-
-export default function LogEntries({ user, entries, onRefresh }) {
-  // ... exact same function body as in the single file
-}
+import { fmt } from "../../utils/helper";
+import Modal from "../../components/modal";
+import LogEntryModal from "./logentriemodal";
 
 // ─── LOG ENTRIES PAGE ───────────────────────────────────────
-function LogEntries({ user, entries, onRefresh }) {
+export default function LogEntries({ user, entries, onRefresh }) {
   const [showModal, setShowModal] = useState(false);
   const [editEntry, setEditEntry] = useState(null);
   const [filter, setFilter] = useState("all");

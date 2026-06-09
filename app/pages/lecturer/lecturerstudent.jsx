@@ -1,4 +1,9 @@
-function LecturerStudents({ students, entries, reports }) {
+import { useState } from "react";
+import { fmt, initials } from "../../utils/helper";
+import Modal from "../../components/modal";
+import Alert from "../../components/alert";
+
+export default function LecturerStudents({ students, entries, reports }) {
   const [selected, setSelected] = useState(null);
   return (
     <div className="page animate-in">

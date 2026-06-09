@@ -1,4 +1,4 @@
-function AuditTrail() {
+export default function AuditTrail() {
   const events = [
     { id: 1, action: "Log Entry Approved", user: "Mr. Emeka Nwosu", entity: "Entry #e3 — Chidi Okonkwo", time: "2024-06-07 09:14", icon: "✅" },
     { id: 2, action: "Weekly Report Signed", user: "Mr. Emeka Nwosu", entity: "Week 1 Report — Chidi Okonkwo", time: "2024-06-10 09:00", icon: "✍️" },

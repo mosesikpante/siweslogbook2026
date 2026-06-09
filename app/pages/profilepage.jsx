@@ -1,4 +1,6 @@
-function ProfilePage({ user }) {
+import { initials, fmt } from "../utils/helper";
+
+export default function ProfilePage({ user }) {
   return (
     <div className="page animate-in">
       <div className="page-header"><h1>My Profile</h1></div>

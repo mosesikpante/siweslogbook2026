@@ -1,6 +1,16 @@
+import { useState, useEffect, useCallback } from "react";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
+import { supabase } from "../../lib/supabase";
+import { generateWeeklyReport } from "../../lib/ai";
+import { fmt, weekNum, getWeekRange } from "../../utils/helper";
+import Spinner from "../../components/spinner";
+import LogEntries from "./logentries";
+import WeeklyReports, { ReportViewModal } from "./weeklyreport";
+import LogEntryModal from "./logentriemodal";
+import ProfilePage from "../profilepage";
 
 // ─── STUDENT DASHBOARD ───────────────────────────────────────
-function StudentDashboard({ user, activeTab }) {
+export default function StudentDashboard({ user, activeTab }) {
   const [entries, setEntries] = useState([]);
   const [reports, setReports] = useState([]);
   const [showLogModal, setShowLogModal] = useState(false);

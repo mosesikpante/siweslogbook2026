@@ -1,5 +1,10 @@
 
-function LecturerReports({ students, reports }) {
+import { useState } from "react";
+import { fmt, initials } from "../../utils/helper";
+import Modal from "../../components/modal";
+import Alert from "../../components/alert";
+
+export default function LecturerReports({ students, reports }) {
   const [selected, setSelected] = useState(null);
   const allReports = reports.filter(r => students.some(s => s.id === r.student_id));
   return (

@@ -1,4 +1,8 @@
-function SupervisorStudents({ students, entries, reports }) {
+import { useState } from "react";
+import { fmt, initials } from "../../utils/helper";
+import Modal from "../../components/modal";
+
+export default function SupervisorStudents({ students, entries, reports }) {
   const [selected, setSelected] = useState(null);
   return (
     <div className="page animate-in">
