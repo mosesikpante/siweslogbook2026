@@ -1,7 +1,7 @@
 // src/pages/student/LogEntries.jsx
 import { useState } from "react";
 import { supabase } from "../../lib/supabase";
-import { isMockMode, MOCK_STATE } from "../../data/mockData";
+import { isMockMode, MOCK_STATE } from "../../data/mockdata";
 import { fmt } from "../../utils/helpers";
 import Modal from "../../components/ui/Modal";
 import LogEntryModal from "./LogEntryModal";
