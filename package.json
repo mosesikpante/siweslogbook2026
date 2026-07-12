@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "siweslogbook2026",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix \"siws logbook 2026\"",
+    "build": "npm install --prefix \"siws logbook 2026\" && npm run build --prefix \"siws logbook 2026\"",
+    "start": "npm run start --prefix \"siws logbook 2026\""
+  }
+}
