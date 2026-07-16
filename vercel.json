@@ -1,5 +1,0 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "siws logbook 2026/build/client",
-  "framework": "vite"
-}
